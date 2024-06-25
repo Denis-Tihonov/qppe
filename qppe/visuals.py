@@ -64,7 +64,7 @@ def plot_phase_trajectory(
     
     phase_trajectory = phase_trajectory@T_Z@T_Y@T_X
     
-    fig = plt.figure(figsize=(5, 5))
+    fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.plot(phase_trajectory[:,0],phase_trajectory[:,1],phase_trajectory[:,2],lw = 1)
     
@@ -156,7 +156,7 @@ def plot_phase_trajectory_and_phase(
     
     cbar.ax.get_yaxis().set_ticks([])
     for i, lab in enumerate(['$0$','$\pi$/2','$\pi$','3$\pi$/2','2$\pi$']):
-        cbar.ax.text(10, (3 * np.pi * i / 6), lab, size=16)
+        cbar.ax.text(1, (3 * np.pi * i / 6), lab, size=16)
     
     ax.plot(
         expextation_values[:,0],
