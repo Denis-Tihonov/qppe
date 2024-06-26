@@ -23,7 +23,7 @@ def plot_short_timeseries(s, frequency, path = None):
     plt.tight_layout()
     
     if path is not None:
-        plt.savefig(path, format='png', dpi=300)
+        plt.savefig(path, format='png', dpi=200)
         
     plt.show()
 
@@ -82,13 +82,8 @@ def plot_phase_trajectory(
     
     fig.tight_layout()
     if path is not None:
-        fig.savefig(
-            path,
-            format='png',
-            dpi=600,
-            bbox_inches='tight'
-        )
-
+        fig.savefig(path, format='png', dpi=200, bbox_inches='tight')
+        
     fig.show()
 
 ############################################################################################################
@@ -178,6 +173,6 @@ def plot_phase_trajectory_and_phase(
     ax.yaxis.pane.fill = False
     ax.zaxis.pane.fill = False
     if path is not None:
-        fig.savefig(path, format='png', dpi=600, bbox_inches='tight')
+        fig.savefig(path, format='png', dpi=200, bbox_inches='tight')
     
     fig.show()
